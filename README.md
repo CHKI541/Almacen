@@ -1,16 +1,36 @@
-# React + Vite
+# Almacén POS & Gestión de Inventario
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web moderna y rápida de Punto de Venta (POS) y Control de Inventario para almacenes locales, construida con React, Tailwind CSS v4 y persistencia en `localStorage`.
 
-Currently, two official plugins are available:
+## Características Clave
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Dashboard de Resumen**:
+  * Estadísticas en tiempo real de ventas, ganancias netas y transacciones del día.
+  * Gráfico SVG interactivo con historial de ventas de los últimos 7 días.
+  * Panel de alertas de stock bajo con reabastecimiento directo en un clic.
+* **Punto de Venta (POS)**:
+  * Lector automático de códigos de barras (mantiene el foco en todo momento).
+  * Indicador de estado del lector (Conectado / Pausado).
+  * Carrito interactivo (modificar cantidades y borrar ítems).
+  * Calculador de vuelto/cambio en tiempo real.
+  * Simulador de lector con códigos de barra del inventario.
+* **Gestión de Inventario (ABM/CRUD)**:
+  * Registro completo de productos (Código de barras, nombre, precio de costo, precio de venta, stock).
+  * Generador automático de códigos de barra aleatorios.
+  * Visualización semafórica de alertas de stock.
+  * Cálculo automático de margen de ganancia absoluto y porcentual.
+* **Diseño Premium**:
+  * Soporte completo para **Modo Oscuro / Modo Claro**.
+  * Tipografía *Outfit* de Google Fonts y transiciones fluidas.
+  * Optimizado para pantallas táctiles y monitores tradicionales.
 
-## React Compiler
+## Despliegue en GitHub Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Esta aplicación cuenta con un pipeline de integración y despliegue continuo configurado con **GitHub Actions** (`.github/workflows/deploy.yml`). Cada vez que subes un cambio a la rama `main`, la aplicación se compila y publica automáticamente.
 
-## Expanding the ESLint configuration
+Para habilitar la publicación:
+1. Dirígete a la pestaña **Settings** (Configuración) de este repositorio.
+2. Haz clic en **Pages** en el menú izquierdo.
+3. En **Source** (Origen), selecciona **GitHub Actions**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+La web estará disponible en: `https://<tu-usuario-github>.github.io/Almacen/`
